@@ -32,7 +32,8 @@ with open(file_path, 'r') as file:
         converted_table = []
         match = re.search(pattern,line)
         #print(match.group())
-        number_word_pattern = r'.*' + '|'.join(number_words) + r'.*'
+#        number_word_pattern = r'.*' + '|'.join(number_words) + r'.*'
+        number_word_pattern = r'\d'
         found_number_words = re.findall(number_word_pattern, line)
 
         print(found_number_words)
